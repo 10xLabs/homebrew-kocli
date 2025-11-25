@@ -6,7 +6,7 @@ require_relative "lib/private"
 class Kocli < Formula
   desc "Internal Kolors CLI"
   homepage "https://github.com/10xLabs/kocli"
-  version "1.39.2"
+  version "1.39.3"
   license "MIT"
 
   depends_on "git"
@@ -14,16 +14,16 @@ class Kocli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/10xLabs/kocli/releases/download/v1.39.2/kocli_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "9a1608bd035f5a2af3cc803c3308ed5f3daa388f3ffadd3ca667dd276594bb8e"
+      url "https://github.com/10xLabs/kocli/releases/download/v1.39.3/kocli_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e744698fe3581a7f12f4cc7ce218651c3fde9d78fc7b26fa538cd50af91217c3"
 
       def install
         bin.install "ko"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/10xLabs/kocli/releases/download/v1.39.2/kocli_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "d399a00f3f23c36d4349eb14f8079566b01166241c1c246cf680518ccc4d906b"
+      url "https://github.com/10xLabs/kocli/releases/download/v1.39.3/kocli_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ce5bf6fbd4fd6b2c36f1ad797a306994c2d78b5f83e73b773548d0cc8ee7338e"
 
       def install
         bin.install "ko"
@@ -33,15 +33,15 @@ class Kocli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/10xLabs/kocli/releases/download/v1.39.2/kocli_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "525671c30347a9de990b0052840d9ac79ef8f3f933fda52417c41683811d9455"
+      url "https://github.com/10xLabs/kocli/releases/download/v1.39.3/kocli_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ad14e97b93c7bc036844d1706ec52a54036b8856f47a7f2c61d11760c421f6fb"
       def install
         bin.install "ko"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/10xLabs/kocli/releases/download/v1.39.2/kocli_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "b2f013e93b27a6b6b6c3bda5b2ded379b9de4350507b6fb4f59044e17e8a8f0b"
+      url "https://github.com/10xLabs/kocli/releases/download/v1.39.3/kocli_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e4d6a8a11b06939b341708845c13e40ab8331d689b765bb71a82585394e89d91"
       def install
         bin.install "ko"
       end
